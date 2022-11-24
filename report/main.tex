@@ -1,0 +1,99 @@
+\documentclass[14pt,a4paper,article]{ncc}
+\usepackage[a4paper, mag=1000, left=2.5cm, right=1cm, top=2cm, bottom=2cm, headsep=0.7cm, footskip=1cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[english,russian]{babel}
+\usepackage{indentfirst}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage[colorlinks]{hyperref}
+\usepackage{amsfonts} 
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{float}
+\graphicspath{{figure/}}
+\DeclareGraphicsExtensions{.png,.jpg}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead[LE,RO]{\thepage}
+\fancyfoot{}
+
+\usepackage{listings}
+
+\hypersetup{linkcolor=black}
+
+
+\begin{document}
+% Title page 
+\begin{titlepage}
+    \begin{center}
+        \textsc{
+            Санкт-Петербургский политехнический университет имени Петра Великого \\[5mm]
+            Физико-механический институт\\[2mm]
+            Высшая школа прикладной математики и физики            
+        }   
+        \vfill
+        \textbf{\large
+            Отчет по лаборабороной работу №1\\
+            по дисциплине "Интервальный анализ"\\[3mm]
+        }                
+    \end{center}
+
+    \vfill
+    \hfill
+    \begin{minipage}{0.5\textwidth}
+        Выполнил: \\[2mm]   
+		Студент: Габдушев Рушан \\
+		Группа: 5030102/90201\\
+    \end{minipage}
+
+	\hfill
+	\begin{minipage}{0.5\textwidth}
+		Принял: \\[2mm]
+		к. ф.-м. н., доцент \\   
+		Баженов Александр Николаевич
+	\end{minipage}
+
+    \vfill
+    \begin{center}
+        \theyear\ г.
+    \end{center}
+\end{titlepage}
+
+\tableofcontents
+\newpage
+\listoffigures
+\newpage
+\listoftables
+\newpage
+
+\section{Постановка задачи}
+\input{task1/problem.tex}
+\input{task2/problem.tex}
+\newpage
+
+\section{Теория}
+\input{common/theory.tex}
+\newpage
+
+\section{Реализация}
+\input{common/impl.tex}
+\newpage
+
+\section{Результаты}
+\input{task1/result.tex}
+\input{task2/result.tex}
+\newpage
+
+\section{Обсуждение}
+\input{common/discuss.tex}
+\newpage
+
+\section{Ссылки на библиотеки}
+\input{common/liter.tex}
+\newpage
+
+\section{Ссылки на репозиторий}
+\input{common/rep.tex}
+
+\end{document}

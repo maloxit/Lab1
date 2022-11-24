@@ -1,0 +1,66 @@
+\subsection{Задача 1: поиск $\delta$}
+
+\subsubsection{Задача 1.1: 0 $\in$ det(\textbf{A})}
+
+Определитель матрицы \textbf{A} 2$\times$2 вычисляется по следующей формуле:
+
+\begin{equation}
+	det(\textbf{A}) = a_{11}a_{22} - a_{12}_{21}
+\end{equation}
+
+Несложно убедиться, что для поставленной матрицы А (\ref{eq1}) определитель следующий:
+
+\begin{equation}
+	det(\textbf{A}) = [0.1 - 2\delta; 0.1 + 2\delta]
+\end{equation}
+
+Так как $\delta$ должен быть не меньше 0, то тогда det(\textbf{A}) будет содержать 0 тогда и только тогда, когда нижняя граница интервала будет меньше или равна 0; это достигается при $\delta \geq$ 0.05.
+
+Таким образом, $\forall \delta \geq 0.05: $ 0 $\in$ det(\textbf{A}).
+
+\subsubsection{Задача 1.2: матрица \textbf{A} - особенная}
+
+Для определения "особенности" матрицы А (\ref{eq1}) при определенном $\delta$ воспользуемся критерием Баумана. Множество vert(\textbf{A}) состоит из 4 элементов:
+\begin{equation}
+	vert(\textbf{A}) = 
+	                \begin{Bmatrix}
+	                    \begin{pmatrix}
+                            1.05 \pm $\delta$ & 1\\
+                            0.95 \pm $\delta$ & 1
+                        \end{pmatrix}
+                    \end{Bmatrix}
+\end{equation}
+
+В силу малой мощности множества vert(\textbf{A}), допустимо посчитать все возможные det(A) A $\in$ vert(\textbf{A}):
+\begin{enumerate}
+    \item
+	    det\begin{pmatrix}
+                1.05 - $\delta$ & 1\\
+                0.95 - $\delta$ & 1
+            \end{pmatrix}
+         = 0.1
+         
+    \item
+	    det\begin{pmatrix}
+                1.05 - $\delta$ & 1\\
+                0.95 + $\delta$ & 1
+            \end{pmatrix}
+         = 0.1 - 2$\delta$
+         
+    \item
+	    det\begin{pmatrix}
+                1.05 + $\delta$ & 1\\
+                0.95 - $\delta$ & 1
+            \end{pmatrix}
+         = 0.1 + 2$\delta$
+        
+    \item
+	    det\begin{pmatrix}
+                1.05 + $\delta$ & 1\\
+                0.95 + $\delta$ & 1
+            \end{pmatrix}
+         = 0.1
+\end{enumerate}
+
+    Видно, что все определители матриц из vert(\textbf{A}) будут положительными только в случае, когда $\delta < 0.05$ и $\delta \geq 0$.
+    Таким образом, $\forall \delta < 0.05$ и  $\delta \geq 0: $\textbf{A} - неособенная.
